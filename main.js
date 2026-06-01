@@ -1,0 +1,25 @@
+const chatBox = document.getElementById("chat-box");
+    
+function appendMessage(text, sender) {
+    const msg = document.createElement("div");
+    msg.classList.add("message", sender);
+    msg.textContent = text;
+        
+    chatBox.appendChild(msg);
+    chatBox.scrollTop = chatBox.scrollHeight;
+}
+    
+function sendMessage() {
+    const input = document.getElementById("user-input");
+    const text = input.value.trim();
+    
+    if (!text) return;
+        
+    appendMessage(text, "user");
+    input.value = "";
+        
+    // Fake bot response (replace with API call)
+    setTimeout(() => {
+    appendMessage("This is a sample response.", "bot");
+    }, 500);
+}
