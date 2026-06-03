@@ -39,5 +39,8 @@ async function sendMessage() {
        method: "POST",
        headers: { "Content-Type": "application/json"},
        body: JSON.stringify({ message: text })
-    })
+    });
+
+    const data = await response.json();
+    appendMessage(data.reply, "bot");
 }
