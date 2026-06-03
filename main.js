@@ -20,6 +20,6 @@ function sendMessage() {
         
     // Fake bot response (replace with API call)
     setTimeout(() => {
-    appendMessage("This is a sample response.", "bot");
+    appendMessage("Hi Buggy!!", "bot");
     }, 500);
 }
